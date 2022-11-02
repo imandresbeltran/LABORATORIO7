@@ -1,10 +1,11 @@
 
 #include <iostream>
 using namespace std;
+#include  "ordenamiento.h"
 
 int main()
 {
-	int cantidad_numeros = 0,i, option;
+	int cantidad_numeros = 0,i,option,n;
 
 	//CICLO DO-WHILE PARA SOLICITAR EL TAMAÑO DE NUESTRO VECTOR
 	do
@@ -19,7 +20,7 @@ int main()
 
 	//LLENAR EL ARREGLO
 	for (i = 0; i < cantidad_numeros; i++) {
-		numeros[i] = rand() % 1000;
+		numeros[i] = rand() % 10;
 	}
 	cout << "A R R E G L O  C O N  N U M E R O S  A L E A T O R I O S" << "\r\n";
 	//IMPRIMIR EL ARREGLO
@@ -39,7 +40,11 @@ int main()
 		switch (option)
 		{
 		case 1: 
-			cout << "HA SELECCIONADO LA OPCION UNO" << "\r\n";
+			n = sizeof(numeros) / sizeof(numeros[0]);
+			ordenamiento ordenar;
+			ordenar.quickSort(numeros, 0, n - 1);
+			cout << "------ A R R E G L O  O R D E N A D O ------" << "\r\n";
+			ordenar.printArray(numeros, n);
 			break;
 		case 2:
 			cout << "HASTA PRONTO!" << "\r\n";
@@ -52,5 +57,7 @@ int main()
 			exit(0);
 			break;
 		}
-	} while (true);
+	} while (option != 2);
 }
+
+

@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 using namespace std;
 
 //IMPLEMENTACIÓN DEL MÉTODO DE ORDENAMIENTO (QUICK SORT)
@@ -6,7 +7,7 @@ using namespace std;
 class ordenamiento
 {
     // FUNCIÓN PARA INTERCAMBIAR DOS ELEMENTOS
-    void swap(int* a, int* b)
+    public: void swap(int* a, int* b)
     {
         int t = *a;
         *a = *b;
@@ -18,7 +19,7 @@ the pivot element at its correct position in sorted
 array, and places all smaller (smaller than pivot)
 to left of pivot and all greater elements to right
 of pivot */
-    int partition(int arr[], int low, int high)
+    public: int partition(int arr[], int low, int high)
     {
         int pivot = arr[high]; // pivot 
         int i= (low- 1); // Index of smaller element and indicates
@@ -39,7 +40,7 @@ of pivot */
 arr[] --> Array to be sorted,
 low --> Starting index,
 high --> Ending index */
-    void quickSort(int arr[], int low, int high)
+    public: void quickSort(int arr[], int low, int high)
     {
         if (low < high) {
             /* pi is partitioning index, arr[p] is now
@@ -52,5 +53,14 @@ high --> Ending index */
             quickSort(arr, pi + 1, high);
         }
     }
+    /* Function to print an array */
+public: void printArray(int arr[], int size)
+          {
+              int i;
+              for (i = 0; i < size; i++)
+                  cout << arr[i] << " ";
+              cout << endl;
+          }
 };
+
 
