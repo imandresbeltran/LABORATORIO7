@@ -20,7 +20,7 @@ int main()
 
 	//LLENAR EL ARREGLO
 	for (i = 0; i < cantidad_numeros; i++) {
-		numeros[i] = rand() % 10;
+		numeros[i] = rand() % 1000;
 	}
 	cout << "A R R E G L O  C O N  N U M E R O S  A L E A T O R I O S" << "\r\n";
 	//IMPRIMIR EL ARREGLO
@@ -40,13 +40,24 @@ int main()
 		switch (option)
 		{
 		case 1:
+			//INSTANCIAMOS LA CLASE DE ORDENAMIENTO
 			ordenamiento s;
-			n = sizeof(numeros[0]) / sizeof(numeros[0]);
+
+			n = sizeof(numeros) / sizeof(numeros[0]);
+			
+			
+			for (i = 0; i < sizeof(numeros); i++) {
+				numeros[i];
+			}
+			
 
 			//ordenamiento ordenar;
 			s.quickSort(numeros, 0, n - 1);
 			cout << "------ A R R E G L O  O R D E N A D O ------" << "\r\n";
-			s.printArray(numeros, n);
+
+			for (i = 0; i < sizeof(numeros); i++) {
+				cout << numeros[i] << endl;
+			}
 			break;
 		case 2:
 			cout << "HASTA PRONTO!" << "\r\n";
