@@ -6,6 +6,7 @@ using namespace std;
 #include  "ordenamiento.h"
 #include "linearsearch.h"
 #include "validaciones.h"
+#include "binarysearch.h"
 
 int main()
 {
@@ -85,6 +86,16 @@ int main()
 						: cout << "EL ELEMENTO ESTA EN EL INDICE: " << result;
 					break;
 				case 2:
+					binarysearch busquedabinaria;
+
+					cout << "INGRESA EL NUMERO QUE DESEAS BUSCAR :" << "\r\n";
+					cin >> x;
+
+					//LLAMAMOS LA FUNCIÓN
+					result = busquedabinaria.binarySearch(numeros, x, 0, cantidad_numeros - 1);
+					(result == -1)
+						? cout << "EL NUMERO NO ESTA PRESENTE EN EL ARREGLO"
+						: cout << "EL NUMERO SE ENCUENTRA EN LA POSICION: " << result;
 					break;
 				case 3:
 					break;

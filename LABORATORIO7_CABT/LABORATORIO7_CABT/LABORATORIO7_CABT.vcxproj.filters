@@ -27,6 +27,9 @@
     <ClCompile Include="validaciones.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="binarysearch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ordenamiento.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="validaciones.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="binarysearch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

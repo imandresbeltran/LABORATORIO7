@@ -127,12 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="binarysearch.cpp" />
     <ClCompile Include="LABORATORIO7_CABT.cpp" />
     <ClCompile Include="linearsearch.cpp" />
     <ClCompile Include="ordenamiento.cpp" />
     <ClCompile Include="validaciones.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="binarysearch.h" />
     <ClInclude Include="linearsearch.h" />
     <ClInclude Include="ordenamiento.h" />
     <ClInclude Include="validaciones.h" />
