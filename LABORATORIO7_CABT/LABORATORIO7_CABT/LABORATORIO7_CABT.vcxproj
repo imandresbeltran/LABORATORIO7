@@ -128,10 +128,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="LABORATORIO7_CABT.cpp" />
+    <ClCompile Include="linearsearch.cpp" />
     <ClCompile Include="ordenamiento.cpp" />
+    <ClCompile Include="validaciones.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="linearsearch.h" />
     <ClInclude Include="ordenamiento.h" />
+    <ClInclude Include="validaciones.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

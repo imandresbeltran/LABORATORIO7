@@ -21,9 +21,21 @@
     <ClCompile Include="ordenamiento.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="linearsearch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="validaciones.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ordenamiento.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="linearsearch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="validaciones.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
