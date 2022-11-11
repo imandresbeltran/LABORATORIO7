@@ -8,10 +8,14 @@ using namespace std;
 #include "validaciones.h"
 #include "binarysearch.h"
 #include "hashTable.h"
+#include "cuadrado.h"
+#include "rectangulo.h"
+#include "triangulo.h"
 
 int main()
 {
-	int cantidad_numeros = 0, i, option, n, buscar = 0, searchmethod, x, result, ejercicio;
+	int cantidad_numeros = 0, i, option, n, buscar = 0, searchmethod, x, result, ejercicio, figuras;
+	double lado, base, altura;
 	hashTable HT;
 
 exercises:
@@ -29,6 +33,76 @@ exercises:
 			goto numbers;
 			break;
 		case 2:
+			cout << "SELECCIONE UNA FIGURA" << "\r\n";
+			cout << "1. CUADRADO" << "\r\n";
+			cout << "2. RECTANGULO" << "\r\n";
+			cout << "3. TRIANGULO" << "\r\n";
+			cout << "4. SALIR" << "\r\n";
+			cin >> figuras;
+
+			switch (figuras)
+			{
+			case 1: 
+				cuadrado cuadrado;
+				validaciones validar;
+				cout << "INGRESE EL LADO: " << "\r\n";
+				cin >> lado;
+				if (validar.validarnumero(lado) == true) {
+					double cuadrado_area = cuadrado.Calcular_AreaC(lado);
+					double cuadrado_perimetro = cuadrado.Calcular_PerimetroC(lado);
+					cout << "EL AREA DEL CUADRADO ES: " << cuadrado_area << "\r\n";
+					cout << "EL PERIMETRO DEL CUADRADO ES: " << cuadrado_perimetro << "\r\n";
+				}
+				else {
+					cout << "ERROR" << "\r\n";
+				}
+				break;
+			case 2:
+				rectangulo rectangulo;
+				validaciones validar;
+
+				cout << "INGRESE LA BASE: " << "\r\n";
+				cin >> base;
+
+				cout << "INGRESE LA ALTURA: " << "\r\n";
+				cin >> altura;
+
+				if (validar.validarnumero(base) == true && validar.validarnumero(altura) == true) {
+					double area_rectangulo = rectangulo.Calcular_AreaR(base, altura);
+					double perimetro_rectangulo = rectangulo.Calcular_PerimetroR(base, altura);
+					cout << "EL AREA DEL RECTANGULO ES: " << area_rectangulo << "\r\n";
+					cout << "EL PERIMETRO DEL RECTANGULO ES: " << perimetro_rectangulo << "\r\n";
+				}
+				else {
+					cout << "ERROR" << "\r\n";
+				}
+				break;
+			case 3:
+				triangulo triangulo;
+				validaciones validar;
+
+				cout << "INGRESE LA BASE: " << "\r\n";
+				cin >> base;
+
+				cout << "INGRESE LA ALTURA: " << "\r\n";
+				cin >> altura;
+
+				cout << "INGRESE EL LADO: " << "\r\n";
+				cin >> lado;
+
+				if (validar.validarnumero(base) == true && validar.validarnumero(altura) == true && validar.validarnumero(lado)) {
+					double area_triangulo = triangulo.Calcular_AreaT(base, altura);
+					double perimetro_triangulo = triangulo.Calcular_PerimetroT(lado);
+
+					cout << "EL AREA DEL TRIANGULO ES: " << area_triangulo << "\r\n";
+					cout << "EL PERIMETRO DEL TRIANGULO ES: " << perimetro_triangulo << "\r\n";
+				}
+				break;
+			default:
+				cout << "INGRESA UNA OPCION VALIDA" << "\r\n";
+				break;
+			}
+
 			break;
 		case 3:
 			exit(0);

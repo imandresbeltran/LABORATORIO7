@@ -132,13 +132,19 @@
     <ClCompile Include="LABORATORIO7_CABT.cpp" />
     <ClCompile Include="linearsearch.cpp" />
     <ClCompile Include="ordenamiento.cpp" />
+    <ClCompile Include="poligono.cpp" />
+    <ClCompile Include="triangulo.cpp" />
     <ClCompile Include="validaciones.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="binarysearch.h" />
+    <ClInclude Include="cuadrado.h" />
     <ClInclude Include="hashTable.h" />
     <ClInclude Include="linearsearch.h" />
     <ClInclude Include="ordenamiento.h" />
+    <ClInclude Include="poligono.h" />
+    <ClInclude Include="rectangulo.h" />
+    <ClInclude Include="triangulo.h" />
     <ClInclude Include="validaciones.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
