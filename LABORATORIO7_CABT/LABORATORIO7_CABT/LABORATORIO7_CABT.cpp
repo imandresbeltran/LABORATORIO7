@@ -7,10 +7,37 @@ using namespace std;
 #include "linearsearch.h"
 #include "validaciones.h"
 #include "binarysearch.h"
+#include "hashTable.h"
 
 int main()
 {
-	int cantidad_numeros = 0, i, option, n, buscar = 0, searchmethod, x, result;
+	int cantidad_numeros = 0, i, option, n, buscar = 0, searchmethod, x, result, ejercicio;
+	hashTable HT;
+
+exercises:
+	do {
+		cout << "P R O G R A M A  O R I E N T A D O  A  O B J E T O S" << "\r\n";
+		cout << "SELECCIONA QUE PROGRAMA DESEAS EJECUTAR" << "\r\n";
+		cout << "1. METODOS DE BUSQUEDA Y ORDENAMIENTO" << "\r\n";
+		cout << "2. CALCULAR AREAS Y PERIMETROS" << "\r\n";
+		cout << "3. SALIR" << "\r\n";
+		cin >> ejercicio;
+
+		switch (ejercicio)
+		{
+		case 1: 
+			goto numbers;
+			break;
+		case 2:
+			break;
+		case 3:
+			exit(0);
+			break;
+		default:
+			cout << "NINGUNA OPCIÓN SELECCIONADA. VUELVE A INTENTARLO" << "\r\n";
+			break;
+		}
+	} while (ejercicio != 3);
 
 	numbers:
 	//CICLO DO-WHILE PARA SOLICITAR EL TAMAÑO DE NUESTRO VECTOR
@@ -98,6 +125,20 @@ int main()
 						: cout << "EL NUMERO SE ENCUENTRA EN LA POSICION: " << result;
 					break;
 				case 3:
+					
+
+					if (HT.isEmpty()) {
+						cout << "Correct answer. Good job!" << "\r\n";
+					}
+					else {
+						cout << "Oh no. We need to check out code!" << "\r\n";
+					}
+
+					for (i = 0; i < cantidad_numeros; i++) {
+						HT.insertItem(rand() % 100, numeros[i]);
+					}
+
+					HT.printTable();
 					break;
 				case 4:
 					goto options1;
